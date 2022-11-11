@@ -6,7 +6,10 @@ var server = http.createServer(function(req, res){
     
     if(req.url == '/'){
 
-        fs.rename('demo.txt','new demo' ,function(error){
+        /*for sync
+       let error = fs.renameSync('demo.txt', 'new demo.txt')*/
+
+        fs.rename('demo.txt','abc.txt',function(error){
 
             if(error){
                 res.writeHead(200,{'content-type' : 'text/html'})
